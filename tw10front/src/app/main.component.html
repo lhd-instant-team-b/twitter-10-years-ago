@@ -1,25 +1,35 @@
-<div style="text-align:center">
-  <h1>
-    {{ title }}!
-  </h1>
-</div>
-<h2>Search Keywords! </h2>
+<body>
+  <div style="text-align:center">
+    <h1>
+      {{ title }}
+      <div>
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            #
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input [(ngModel)]="sq.keyword" class="form-control" id="formInput" name="kw" placeholder="cat">
+                </div>
+                <div class="col">
+                  <select [(ngModel)]="sq.range" class="form-control" id="formSelect" name="range">
+                    <option (click)="alert(sq.range)">1개월</option>
+                    <option>3개월</option>
+                    <option>6개월</option>
+                    <option>1년</option>
+                    <option>5년</option>
+                    <option>10년</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </h1>
+  </div>
 
-<form>
-  <div class="form-group">
-    <label for="formInput">Keyword</label>
-    <input [(ngModel)]="sq.keyword" class="form-control" id="formInput" name="kw" placeholder="고양이">
-  </div>
-  <div class="form-group">
-    <label for="formSelect">Search Range</label>
-    <select [(ngModel)]="sq.range" class="form-control" id="formSelect" name="range">
-      <option (click)="alert(sq.range)">1개월</option>
-      <option>3개월</option>
-      <option>6개월</option>
-      <option>1년</option>
-      <option>5년</option>
-      <option>10년</option>
-    </select>
-  </div>
-</form>
-<button routerLink="/tweets"> go </button>
+  <button routerLink="/tweets"> go </button>
+<!--      <div class="collapse" id="collapseExample"> !-->

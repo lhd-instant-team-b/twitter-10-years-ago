@@ -1,6 +1,27 @@
-<ul class="heroes">
-  <li *ngFor="let tweet of tweets">
-    <span class="badge"></span> {{tweet.url}}
-  </li>
-</ul>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+</head>
+
 <button routerLink="/"> goBack </button>
+<body>
+  <div class="container">
+    <div class="row" *ngFor="let tweet of tweets">
+      <div class="col-md-4">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <p> {{tweet.text}} </p>
+        <a class="btn btn-primary" href="{{tweet.post_url}}">View Tweets</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer class="py-5 bg-dark">
+</footer>
+

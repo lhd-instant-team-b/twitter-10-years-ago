@@ -4,7 +4,7 @@ import { SearchQuery } from './models';
 @Component({
   selector: 'main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./vendor/bootstrap/css/bootstrap.min.css', './style.css']
 })
 
 export class MainComponent {

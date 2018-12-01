@@ -5,5 +5,8 @@ export class SearchQuery {
 
 export class Tweet {
   id: number;
-  url: string;
+  text: string;
+  post_url: string;
+  created_at: string;
+  image_list: string[];
 }

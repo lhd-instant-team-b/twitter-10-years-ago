@@ -5,6 +5,7 @@ import { Service } from './service';
 @Component({
   selector: 'showTweets',
   templateUrl: './showTweets.component.html',
+  styleUrls: ['./vendor/bootstrap/css/bootstrap.min.css', './style.css']
 })
 
 export class ShowTweetsComponent implements OnInit {
