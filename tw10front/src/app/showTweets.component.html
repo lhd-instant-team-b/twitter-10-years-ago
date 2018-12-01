@@ -5,10 +5,13 @@
   <meta name="author" content="">
 </head>
 
-<button routerLink="/"> goBack </button>
+<!--<button routerLink="/"> goBack </button>-->
+<button type="button" routerLink="/" class="btn btn-default search-btn small" aria-label="Left Align">
+  뒤로가기
+</button>
 <body>
   <div class="container">
-    <div class="row" *ngFor="let tweet of tweets">
+    <div class="row tweet-row" *ngFor="let tweet of tweets">
       <div class="col-md-4">
         <a href="#">
           <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
@@ -23,5 +26,6 @@
 </body>
 
 <footer class="py-5 bg-dark">
+  <span class="footer-text">All Rights Reserved.</span>
 </footer>
 

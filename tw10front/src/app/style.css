@@ -32,7 +32,25 @@ body {
   border: 1px solid white;
   color: white;
 }
+.search-btn.small {
+  font-size: 3vh;
+  margin-top: 2vh;
+}
 
+/*tweets*/
+.tweet-row {
+  margin-bottom: 3vh;
+}
 .pagination {
   margin-bottom: 15px;
+}
+
+
+/*footer*/
+footer {
+  text-align: center;
+}
+.footer-text {
+  text-align: center;
+  color: white;
 }
