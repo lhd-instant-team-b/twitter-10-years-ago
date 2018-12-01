@@ -24,7 +24,7 @@ export class ShowTweetsComponent implements OnInit {
       if (params['keyword'] !== undefined) {
         let id = params['keyword'];
         this.service.getTweets(id)
-        .subscribe(tweets => this.tweets = tweets);
+        .subscribe(tweets => this.tweets = tweets.body);
       } 
     });
   }

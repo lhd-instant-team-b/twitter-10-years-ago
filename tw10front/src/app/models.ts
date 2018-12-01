@@ -8,5 +8,5 @@ export class Tweet {
   text: string;
   post_url: string;
   created_at: string;
-  image_list: string[];
+  media: string;
 }
