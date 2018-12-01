@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchQuery } from './models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'main',
@@ -8,6 +9,7 @@ import { SearchQuery } from './models';
 })
 
 export class MainComponent {
+  constructor(private router:Router) {}
   title = 'Twitter Back Ago';
   sq: SearchQuery = {
     keyword: '',
@@ -18,4 +20,8 @@ export class MainComponent {
     console.log(this.sq.keyword);
     console.log(this.sq.range);
     }
+
+  onClick():void {
+    this.router.navigate(['/tweets', { this.sq.keyword }]);
+  }
 }
