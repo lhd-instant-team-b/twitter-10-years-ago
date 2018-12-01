@@ -22,6 +22,6 @@ export class MainComponent {
     }
 
   onClick():void {
-    this.router.navigate(['/tweets', { this.sq.keyword }]);
+    this.router.navigate(['/tweets', this.sq.keyword]);
   }
 }

@@ -1,11 +1,36 @@
 body {
   padding-top: 54px;
+  background-color: transparent;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+
+.main-body {
+  padding-top: 15%;
+}
+.main-title {
+  color: white;
+}
+.search-input {
+  width: 50vh;
+  font-size: 8vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 5px solid white;
+  margin-left: 5vh;
+  color: white;
+}
+.search-btn {
+  font-size: 6vh;
+  margin-left: 3vh;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
 
 .pagination {

@@ -1,6 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import { Tweet } from './models';
 import { Service } from './service';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'showTweets',
@@ -9,14 +12,20 @@ import { Service } from './service';
 })
 
 export class ShowTweetsComponent implements OnInit {
-  constructor(private service:Service) {}
+  constructor(
+    private service:Service,
+    private route:ActivatedRoute,
+    private location: Location,
+  ) {}
   tweets: Tweet[];
 
   ngOnInit(): void {
-    this.getTweets();
+  this.route.params.pipe(
+        switchMap((params:ParamMap) => this.service.getTweets(params.get('keyword'))))
+        .subscribe((tweets:Tweet[]) => this.tweets = tweets);
   }
 
-  getTweets(): void {
-    this.service.getTweets().then(tweets => this.tweets = tweets);
-  }
+  this.route.params.pipe(switchMap((params: Params) => {
+    this.heroService.getHero(+params['id'])
+    })).subscribe((hero: Hero) => this.hero = hero); 
 }

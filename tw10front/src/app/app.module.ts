@@ -27,7 +27,7 @@ import { Service } from './service';
         component: MainComponent
       },
       {
-        path: 'tweets',
+        path: 'tweets/:keyword',
         component: ShowTweetsComponent
       }
     ])
