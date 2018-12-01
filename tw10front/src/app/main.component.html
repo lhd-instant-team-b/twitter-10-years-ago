@@ -1,0 +1,35 @@
+<body class="main-body">
+<div style="text-align:center">
+  <h1 class="main-title">{{ title }}</h1>
+  <div>
+    <span style="color: white; font-size: 20vh; vertical-align: middle;">#</span>
+    <input [(ngModel)]="sq.keyword" type="text" class="search-input">
+    <button type="button" (click)="onClick()" class="btn btn-default search-btn" aria-label="Left Align">
+      검색
+    </button>
+    <!--<p>-->
+    <!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+    <!--#-->
+    <!--</button>-->
+    <!--</p>-->
+    <div class="collapse" id="collapseExample">
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <input [(ngModel)]="sq.keyword" class="form-control" id="formInput" name="kw" placeholder="cat">
+          </div>
+          <div class="col">
+            <select [(ngModel)]="sq.range" class="form-control" id="formSelect" name="range">
+              <option (click)="alert(sq.range)">1개월</option>
+              <option>3개월</option>
+              <option>6개월</option>
+              <option>1년</option>
+              <option>5년</option>
+              <option>10년</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
