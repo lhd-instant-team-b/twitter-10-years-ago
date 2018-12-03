@@ -29,8 +29,8 @@ If you connect to `localhost:4200`, you can see our web page.
 - [AngularJS](https://angularjs.org/) - for web framework
 
 ## Authors
-- [Jiyeon Park](@timedilation) as a front-end developer
-- [Dahyun Yu](@yuda110) as a back-end developer
+- [Jiyeon Park](https://github.com/timedilation) as a front-end developer
+- [Dahyun Yu](https://github.com/yuda110) as a back-end developer
 
 ## License
 This project is licensed under the MIT License
